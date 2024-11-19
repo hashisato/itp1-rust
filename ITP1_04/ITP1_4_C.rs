@@ -1,0 +1,24 @@
+fn main() {
+    loop {
+        let (a, b, op) = input();
+        if op == "?" { break }
+        calc(a, b, op);
+    }
+}
+
+fn input() -> (i32, i32, String) {
+    let mut data = String::new();
+    std::io::stdin().read_line(&mut data).expect("読み込みに失敗");
+    let mut iter = data.trim().split_whitespace();
+    let a: i32 = iter.next().unwrap().parse().unwrap();
+    let op: String = iter.next().unwrap().parse().unwrap();
+    let b: i32 = iter.next().unwrap().parse().unwrap();
+    (a, b, op)
+}
+
+fn calc(a:i32, b:i32, op:String) {
+    if op == "+" { println!("{}",a+b); }
+    else if op == "-" { println!("{}",a-b); }
+    else if op == "*" { println!("{}",a*b); }
+    else if op == "/" { println!("{}",a/b); }
+}
