@@ -16,6 +16,7 @@ fn main() {
         }
     }
 }
+
 fn input() -> (usize, usize, usize, Vec<Vec<usize>>, Vec<Vec<usize>>) {
     let mut s = String::new();     //n,m,lの入力
     std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
@@ -49,6 +50,7 @@ fn input() -> (usize, usize, usize, Vec<Vec<usize>>, Vec<Vec<usize>>) {
     }
     (n, m, l, a, b)
 }
+
 fn calc(n: usize, m: usize, l: usize, a: Vec<Vec<usize>>, b: Vec<Vec<usize>>, mut c: Vec<Vec<usize>>) -> Vec<Vec<usize>> {
     for i in 0..n {
         for j in 0..m {

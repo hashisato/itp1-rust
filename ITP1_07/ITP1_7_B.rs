@@ -5,6 +5,7 @@ fn main() {
         checker(n, x);
     }
 }
+
 fn input() -> (u64, u64) {
     let mut s = String::new();
     std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
@@ -13,6 +14,7 @@ fn input() -> (u64, u64) {
     let x: u64 = iter.next().unwrap().parse().expect("Failed to parse");
     (n, x)
 }
+
 fn checker(n: u64, x: u64) {
     let mut count: u64 = 0;
     for i in 1..n-1 {

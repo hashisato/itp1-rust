@@ -8,6 +8,7 @@ fn main() {
         println!("{}", ans);
     }
 }
+
 fn input() -> (usize, usize, Vec<Vec<isize>>, Vec<isize>) {
     let mut s = String::new();     //n,mの入力
     std::io::stdin().read_line(&mut s).expect("Failed to read line!!");

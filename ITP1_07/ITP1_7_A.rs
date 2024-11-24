@@ -10,6 +10,7 @@ fn main() {
         else { println!("F") }
     }
 }
+
 fn input() -> (i8, i8, i8) {
     let mut s = String::new();
     std::io::stdin().read_line(&mut s).expect("Failed to read line!!");

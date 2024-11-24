@@ -2,6 +2,7 @@ fn main() {
     let (mut r, mut c, mut data) = input();
     draw(r, c, data);
 }
+
 fn input() -> (u64, u64, Vec<Vec<usize>>) {
     let mut s = String::new();     //r,cの入力
     std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
@@ -22,6 +23,7 @@ fn input() -> (u64, u64, Vec<Vec<usize>>) {
     }
     (r, c, data)
 }
+
 fn draw(r: u64, c: u64, mut data: Vec<Vec<usize>>) {
     let r: usize = r as usize;
     let c: usize = c as usize;
