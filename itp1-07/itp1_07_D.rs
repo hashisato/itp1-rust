@@ -9,7 +9,7 @@ fn main() {
         c.push(v);
     }
     let c = calc(n, m, l, a, b, c);
-    for i in 0..n {     //行列Cの出力
+    for i in 0..n {
         for j in 0..l {
             if j != l-1 { print!("{} ",c[i][j]); }
             else { println!("{}",c[i][j]); }
@@ -18,13 +18,13 @@ fn main() {
 }
 
 fn input() -> (usize, usize, usize, Vec<Vec<usize>>, Vec<Vec<usize>>) {
-    let mut s = String::new();     //n,m,lの入力
+    let mut s = String::new();
     std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
     let mut iter = s.trim().split_whitespace();
     let n: usize = iter.next().unwrap().parse().expect("Failed to parse");
     let m: usize = iter.next().unwrap().parse().expect("Failed to parse");
     let l: usize = iter.next().unwrap().parse().expect("Failed to parse");
-    let mut a: Vec<Vec<usize>> = vec![];     //行列Aの入力
+    let mut a: Vec<Vec<usize>> = vec![];
     for _ in 0..n {
         let mut s = String::new();
         std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
@@ -36,7 +36,7 @@ fn input() -> (usize, usize, usize, Vec<Vec<usize>>, Vec<Vec<usize>>) {
         }
         a.push(v);
     }
-    let mut b: Vec<Vec<usize>> = vec![];     //行列Bの入力
+    let mut b: Vec<Vec<usize>> = vec![];
     for _ in 0..m {
         let mut s = String::new();
         std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
@@ -55,7 +55,7 @@ fn calc(n: usize, m: usize, l: usize, a: Vec<Vec<usize>>, b: Vec<Vec<usize>>, mu
     for i in 0..n {
         for j in 0..m {
             for k in 0..l {
-                c[i][k] += a[i][j] * b[j][k];     //行列Cの入力
+                c[i][k] += a[i][j] * b[j][k];
             }
         }
     }

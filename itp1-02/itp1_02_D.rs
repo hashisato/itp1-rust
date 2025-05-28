@@ -6,11 +6,9 @@ fn main(){
 fn input() -> (i32,i32,i32,i32,i32){
     let mut data: [i32; 5] = [0,0,0,0,0];
     let mut input = String::new();
-    std::io::stdin().read_line(&mut input).expect("Failed to read line");
-    let v: Vec<i32> = input.split_whitespace()
-                        .map(|s| s.trim().parse().unwrap_or(0))
-                        .collect();
-    return (v[0],v[1],v[2],v[3],v[4]);
+    std::io::stdin().read_line(&mut input).unwrap();
+    let v: Vec<i32> = input.split_whitespace().map(|s| s.parse().unwrap()).collect();
+    return (v[0],v[1],v[2],v[3],v[4])
 }
 
 fn check(w: i32,h: i32,x: i32,y: i32,r: i32) -> String{

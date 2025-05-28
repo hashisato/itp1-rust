@@ -22,7 +22,7 @@ fn main() {
 
 fn input() -> i32 {
     let mut num = String::new();
-    std::io::stdin().read_line(&mut num).expect("読み込みに失敗");
+    std::io::stdin().read_line(&mut num).expect("Failed to read line");
     let mut iter = num.trim().split_whitespace();
     let n: i32 = iter.next().unwrap().parse().unwrap();
     n

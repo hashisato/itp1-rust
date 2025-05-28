@@ -4,12 +4,12 @@ fn main() {
 }
 
 fn input() -> (u64, u64, Vec<Vec<usize>>) {
-    let mut s = String::new();     //r,cの入力
+    let mut s = String::new();
     std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
     let mut iter = s.trim().split_whitespace();
     let r: u64 = iter.next().unwrap().parse().expect("Failed to parse");
     let c: u64 = iter.next().unwrap().parse().expect("Failed to parse");
-    let mut data: Vec<Vec<usize>> = vec![];     //表の入力
+    let mut data: Vec<Vec<usize>> = vec![];
     for _ in 0..r {
         let mut s = String::new();
         std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
@@ -33,7 +33,7 @@ fn draw(r: u64, c: u64, mut data: Vec<Vec<usize>>) {
             print!("{} ",data[i][j]);
             sum_r += data[i][j];
         }
-        data[i].push(sum_r);     //i行のc列目にsum_rを追加
+        data[i].push(sum_r);
         println!("{}",sum_r);
     }
     for j in 0..c+1 {

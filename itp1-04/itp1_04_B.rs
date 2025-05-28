@@ -9,7 +9,7 @@ fn main() {
 
 fn input() -> f64 {
     let mut data = String::new();
-    std::io::stdin().read_line(&mut data).expect("読み込みに失敗");
+    std::io::stdin().read_line(&mut data).expect("Failed to read line");
     let mut iter = data.trim().split_whitespace();
     let r: f64 = iter.next().unwrap().parse().unwrap();
     r

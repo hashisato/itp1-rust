@@ -8,7 +8,7 @@ fn main() {
 
 fn input() -> Vec<i64> {
     let mut num = String::new();
-    std::io::stdin().read_line(&mut num).expect("読み込みに失敗");
+    std::io::stdin().read_line(&mut num).expect("Failed to read line");
     let num: i32 = num.trim().parse().unwrap();
     
     let mut data = String::new();

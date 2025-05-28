@@ -6,15 +6,9 @@ fn main(){
 
 fn input() -> (i32){
     let mut input = String::new();
-    std::io::stdin().read_line(&mut input)
-        .unwrap_or_else(|err| {
-            println!("Failed to read line: {}", err);0
-        });
+    std::io::stdin().read_line(&mut input).unwrap();
     let mut iter = input.split_whitespace();
-    let i: i32 = iter.next().unwrap().parse()
-        .unwrap_or_else(|err| {
-            println!("Index entered was not a number: {}", err);0
-        });
+    let i: i32 = iter.next().unwrap().parse().unwrap();
     return (i);
 }
 

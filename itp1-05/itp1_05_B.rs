@@ -1,33 +1,33 @@
 fn main() {
     loop {
-        let (mut H, mut W) = input();
-        if H == 0 && W == 0 { break }
-        else { draw(H,W); }
+        let (mut h, mut w) = input();
+        if h == 0 && w == 0 { break }
+        else { draw(h,w); }
     }
 }
 
 fn input() -> (i32, i32) {
     let mut num = String::new();
-    std::io::stdin().read_line(&mut num).expect("読み込みに失敗");
+    std::io::stdin().read_line(&mut num).expect("Failed to read line");
     let mut iter = num.trim().split_whitespace();
-    let H: i32 = iter.next().unwrap().parse().unwrap();
-    let W: i32 = iter.next().unwrap().parse().unwrap();
-    (H, W)
+    let h: i32 = iter.next().unwrap().parse().unwrap();
+    let w: i32 = iter.next().unwrap().parse().unwrap();
+    (h, w)
 }
 
-fn draw(H:i32, W:i32) {
+fn draw(h:i32, w:i32) {
     let mut index_i: i32 = 0;
     let mut index_j: i32 = 0;
-    while index_i<H {
-        if index_i == 0 || index_i == (H-1) {
-            while index_j<W {
+    while index_i<h {
+        if index_i == 0 || index_i == (h-1) {
+            while index_j<w {
                 index_j += 1;
                 print!("#");
             }
         }
         else {
-            while index_j<W {
-                if index_j == 0 || index_j == (W-1) {
+            while index_j<w {
+                if index_j == 0 || index_j == (w-1) {
                     print!("#");
                 }
                 else {

@@ -10,12 +10,12 @@ fn main() {
 }
 
 fn input() -> (usize, usize, Vec<Vec<isize>>, Vec<isize>) {
-    let mut s = String::new();     //n,mの入力
+    let mut s = String::new();
     std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
     let mut iter = s.trim().split_whitespace();
     let n = iter.next().unwrap().parse().expect("Failed to parse");
     let m = iter.next().unwrap().parse().expect("Failed to parse");
-    let mut a: Vec<Vec<isize>> = vec![];     //行列Aの作成
+    let mut a: Vec<Vec<isize>> = vec![];
     for _ in 0..n {
         let mut s = String::new();
         std::io::stdin().read_line(&mut s).expect("Failed to read line!!");
@@ -27,7 +27,7 @@ fn input() -> (usize, usize, Vec<Vec<isize>>, Vec<isize>) {
         }
         a.push(v); 
     }
-    let mut b: Vec<isize> = vec![];     //行列Bの作成
+    let mut b: Vec<isize> = vec![];
     for _ in 0..m {
         let mut s = String::new();
         std::io::stdin().read_line(&mut s).expect("Failed to read line!!");

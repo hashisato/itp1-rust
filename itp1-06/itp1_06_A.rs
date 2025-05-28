@@ -9,17 +9,13 @@ fn main() {
 
 fn input() -> Vec<i32> {
     let mut n = String::new();
-    std::io::stdin().read_line(&mut n).expect("読み込みに失敗");
+    std::io::stdin().read_line(&mut n).expect("Failed to read line");
     let mut iter = n.trim().split_whitespace();
     let n: i32 = iter.next().unwrap().parse().unwrap();
 
     let mut a = String::new();
-    std::io::stdin().read_line(&mut a).expect("読み込みに失敗");
+    std::io::stdin().read_line(&mut a).expect("Failed to read line");
     let mut iter = a.trim().split_whitespace();
-    let vec: Vec<i32> = vec![];
-    let mut a = Vec::new();
-    for __ in 0..n {
-        a.push(iter.next().unwrap().parse().unwrap());
-    }
+    let a: Vec<i32> = iter.map(|s| s.parse().unwrap()).collect();
     a
 }
