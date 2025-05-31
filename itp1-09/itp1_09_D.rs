@@ -1,10 +1,10 @@
 use std::io::{self, BufRead};
 
 fn main() {
-    string_conversion();
+    stringConversion();
 }
 
-fn string_conversion() {
+fn stringConversion() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
     let mut s = lines.next().unwrap().unwrap().trim().to_string();

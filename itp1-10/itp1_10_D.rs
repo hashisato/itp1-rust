@@ -3,7 +3,7 @@ use std::str::FromStr;
 
 fn main() {
     let data = input();
-    Minkowski(data);
+    minkowski(data);
 }
 
 fn input() -> Vec<Vec<f64>> {
@@ -26,7 +26,7 @@ fn input() -> Vec<Vec<f64>> {
     data
 }
 
-fn Minkowski(data: Vec<Vec<f64>>) {
+fn minkowski(data: Vec<Vec<f64>>) {
     for i in 1..=3 {
         let mut ans: f64 = 0.0;
         for j in 0..data[0].len() {

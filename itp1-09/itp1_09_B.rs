@@ -1,10 +1,6 @@
 use std::io::{self, BufRead};
 
 fn main() {
-    input();
-}
-
-fn input() {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
     while let Some(Ok(line)) = lines.next() {

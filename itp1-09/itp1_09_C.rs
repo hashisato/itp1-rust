@@ -1,11 +1,11 @@
 use std::io::{self, BufRead};
 
 fn main() {
-    let scores: [usize; 2] = card_game();
+    let scores: [usize; 2] = cardGame();
     println!("{} {}", scores[0], scores[1]);
 }
 
-fn card_game() -> [usize; 2] {
+fn cardGame() -> [usize; 2] {
     let stdin = io::stdin();
     let mut lines = stdin.lock().lines();
     let num: usize = lines.next().unwrap().unwrap().trim().parse().unwrap();
