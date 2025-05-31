@@ -23,7 +23,7 @@ This repository contains solutions to the "Introduction to Programming (ITP1)" p
 
 ## References
 
-- [Aizu Online Judge ITP1](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1)
+- [Aizu Online Judge ITP1](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1)
 - [The Rust Programming Language](https://doc.rust-lang.org/book/)
 
 ## License
