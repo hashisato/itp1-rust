@@ -1,4 +1,4 @@
-# itp1-rust
+# [itp1-rust](https://github.com/hashisato/itp1-rust)
 
 ## Overview
 
