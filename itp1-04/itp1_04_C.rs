@@ -17,8 +17,11 @@ fn input() -> (i32, i32, String) {
 }
 
 fn calc(a:i32, b:i32, op:String) {
-    if op == "+" { println!("{}",a+b); }
-    else if op == "-" { println!("{}",a-b); }
-    else if op == "*" { println!("{}",a*b); }
-    else if op == "/" { println!("{}",a/b); }
+    match op.as_str() {
+        "+" => println!("{}", a + b),
+        "-" => println!("{}", a - b),
+        "*" => println!("{}", a * b),
+        "/" => println!("{}", a / b),
+        _ => {}
+    }
 }
