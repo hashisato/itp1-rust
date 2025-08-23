@@ -1,8 +1,5 @@
-fn main(){
-    let mut i = 0;
-    loop{
-        if(i==1000){ break; }
+fn main() {
+    for _ in 0..1000 {
         println!("Hello World");
-        i = i+1;
     }
 }
