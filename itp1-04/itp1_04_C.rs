@@ -16,7 +16,7 @@ fn input() -> (i32, i32, String) {
     (a, b, op)
 }
 
-fn calc(a:i32, b:i32, op:String) {
+fn calc(a: i32, b: i32, op: String) {
     match op.as_str() {
         "+" => println!("{}", a + b),
         "-" => println!("{}", a - b),
