@@ -1,15 +1,16 @@
 fn main(){
-    let (a, b, c) = input();
-    if a<b && b<c { println!("Yes"); }
-    else { println!("No"); }
+    let vec: Vec<i32> = input();
+    match (
+        vec[0] < vec[1],
+        vec[1] < vec[2]
+    ) {
+        (true, true) => println!("Yes"),
+        _ => println!("No"),
+    }
 }
 
-fn input() -> (i32, i32, i32){
+fn input() -> Vec<i32>{
     let mut input = String::new();
     std::io::stdin().read_line(&mut input).unwrap();
-    let mut iter = input.split_whitespace();
-    let a: i32 = iter.next().unwrap().parse().unwrap();
-    let b: i32 = iter.next().unwrap().parse().unwrap();
-    let c: i32 = iter.next().unwrap().parse().unwrap();
-    (a, b, c)
+    input.split_whitespace().map(|s| s.parse().unwrap()).collect()
 }
