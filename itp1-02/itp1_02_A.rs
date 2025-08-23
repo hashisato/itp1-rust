@@ -1,6 +1,6 @@
 fn main(){
     let (a, b) = input();
-    println!("a {} b",compare(a,b));
+    println!("a {} b", compare(a,b));
 }
 
 fn input() -> (i32, i32){
@@ -12,7 +12,7 @@ fn input() -> (i32, i32){
     (a, b)
 }
 
-fn compare(a: i32,b: i32) -> String{
+fn compare(a: i32, b: i32) -> String{
     match a.cmp(&b) {
         std::cmp::Ordering::Less => "<".to_string(),
         std::cmp::Ordering::Greater => ">".to_string(),
