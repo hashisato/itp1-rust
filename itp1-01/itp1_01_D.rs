@@ -1,21 +1,15 @@
 fn main(){
     let mut s = input();
-    let mut x: (i32, i32, i32) = watch(s);
-    println!("{}:{}:{}", x.0,x.1,x.2);
+    let h: usize = s / 3600;
+    s %= 3600;
+    let m: usize = s / 60;
+    s %= 60;
+    println!("{}:{}:{}", h, m, s);
 }
 
-fn input() -> (i32){
+fn input() -> (usize){
     let mut input = String::new();
     std::io::stdin().read_line(&mut input).unwrap();
-    let mut iter = input.split_whitespace();
-    let i: i32 = iter.next().unwrap().parse().unwrap();
-    return (i);
-}
-
-fn watch(mut i: i32) -> (i32, i32, i32){
-    let h = i/3600;
-    i %= 3600;
-    let m = i/60;
-    let s = i%60;
-    return (h,m,s);
+    let mut s: usize = input.trim().parse().unwrap();
+    return (s);
 }
