@@ -1,18 +1,11 @@
-fn main(){
-    swap();
-}
-
-fn swap(){
-    loop{
-        let mut input = String::new();
-        std::io::stdin().read_line(&mut input).unwrap();
-        let mut iter = input.split_whitespace();
-        let mut x = iter.next().unwrap().parse().unwrap_or(0);
-        let mut y = iter.next().unwrap().parse().unwrap_or(0);
-        if x == 0 && y == 0 { break; }
+fn main() {
+    for line in std::io::stdin().lines() {
+        let input = line.unwrap();
+        let nums: Vec<i32> = input.split_whitespace().map(|s| s.parse().unwrap()).collect();
+        if nums[0] == 0 && nums[1] == 0 { break; }
         else{
-            if x <= y { println!("{} {}",x,y)}
-            else { println!("{} {}",y,x)}
+            if nums[0] <= nums[1] { println!("{} {}",nums[0],nums[1])}
+            else { println!("{} {}",nums[1],nums[0])}
         }
     }
 }
