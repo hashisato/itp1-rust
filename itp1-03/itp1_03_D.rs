@@ -8,6 +8,5 @@ fn input() -> Vec<u32> {
     let mut input = String::new();
     std::io::stdin().read_line(&mut input).unwrap();
     let mut iter = input.split_whitespace();
-    let data: Vec<u32> = iter.map(|x| x.parse().unwrap()).collect();
-    data
+    iter.map(|x| x.parse().unwrap()).collect()
 }
