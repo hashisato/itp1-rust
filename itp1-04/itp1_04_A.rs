@@ -1,8 +1,8 @@
 fn main() {
     let (a, b) = input();
-    let d = a / b;
-    let r = a % b;
-    let f = a as f64 / b as f64;
+    let d: i32 = a / b;
+    let r: i32 = a % b;
+    let f: f64 = a as f64 / b as f64;
     println!("{} {} {}",d,r,f);
 }
 
